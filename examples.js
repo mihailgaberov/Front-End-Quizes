@@ -39,4 +39,32 @@ console.log(bar.x);	// undefined
 =====================================
 "This is a string" instanceof String;	// true
 =====================================
+var bar = 1,
+    foo = {};
 
+foo: {
+    bar: 2;
+    baz: ++bar;
+};
+foo.baz + foo.bar + bar;    // NaN
+=====================================
+var myArr = ['foo', 'bar', 'baz'];
+myArr[2];
+console.log('2' in myArr);  // true
+=====================================
+var arr = [];
+arr[0]  = 'a';
+arr[1]  = 'b';
+arr.foo = 'c';
+alert(arr.length);  // 2
+=====================================
+10 > 9 > 8 === true;    // false
+=====================================
+function foo(a, b) {
+    arguments[1] = 2;
+    alert(b);
+}
+foo(1); // undefined
+=====================================
+NaN === NaN;
+=====================================
