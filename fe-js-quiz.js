@@ -101,6 +101,8 @@ arr.foo = 'c';
 alert(arr.length);  // 2
 =====================================
 10 > 9 > 8 === true;    // false
+// Order of operations
+// ((10 > 9) > 8) => true > 8 => 1 > 8 => false
 =====================================
 function foo(a, b) {
     arguments[1] = 2;
