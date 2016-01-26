@@ -1,12 +1,12 @@
-Is <keygen> a valid HTML5 tag?
+Is <keygen> a valid HTML5 tag? -->
 
-Answer: Yes.
-==============================
-Does the <bdo> tag change the direction of text?
+<!-- Answer: Yes. -->
+<!-- ============================== -->
+<!-- Does the <bdo> tag change the direction of text? -->
 
-Answer: Yes.
-==============================
-HTML:
+<!-- Answer: Yes. -->
+<!-- ============================== -->
+<!-- HTML: -->
 
 <figure>
 	<img src="myimage.jpg" alt="My image">
@@ -14,23 +14,23 @@ HTML:
 		<p>This is my self portrait.</p>
 	</figcaption>
 </figure>
-Is the above HTML valid?
+<!-- Is the above HTML valid? -->
 
-Answer: Yes.
-=============================
-In what situation should you use the <small> tag?
+<!-- Answer: Yes. -->
+<!-- ============================= -->
+<!-- In what situation should you use the <small> tag? -->
 
-Answer: When you want to add copyright information inside a <footer>
-=============================
-If a web page contains organic, multiple <h1> tags, will it affect the SEO negativley?
+<!-- Answer: When you want to add copyright information inside a <footer> -->
+<!-- ============================= -->
+<!-- If a web page contains organic, multiple <h1> tags, will it affect the SEO negativley? -->
 
-Answer: No.
-=============================
-If you have a page of search results and want to highlight the search term, what HTML tag would you use?
+<!-- Answer: No. -->
+<!-- ============================= -->
+<!-- If you have a page of search results and want to highlight the search term, what HTML tag would you use? -->
 
-Answer: <mark>
-=============================
-HTML:
+<!-- Answer: <mark> -->
+<!-- ============================= -->
+<!-- HTML: -->
 
 <article>
     <h1>Hello World</h1>
@@ -46,7 +46,59 @@ HTML:
     <h1>This is awesome</h1>
     <p>I am some other text</p>
 </article>
-What does the scoped attribute do?
+<!-- What does the scoped attribute do? -->
 
-Answer: Applies style rules to all children of the scoped parent element
-=============================
+<!-- Answer: Applies style rules to all children of the scoped parent element -->
+<!-- ============================= -->
+<article>
+    <a href="#">
+        <h1>Hello</h1>
+        <p>I am some text</p>
+    </a>
+</article>
+<!-- Does HTML5 support block-level links? -->
+
+<!-- Answer: Yes -->
+<!-- ============================= -->
+<img src="mypic.jpg" style="visibility: hidden" alt="My picture">
+<!-- Does the HTML above trigger a http request when the page first loads ? -->
+
+<!-- Answer: Yes -->
+<!-- ============================= -->
+<div style="display: none;">
+    <img src="mypic.jpg" alt="My photo">
+</div>
+<!-- Does the HTML above trigger a http request when the page first loads? -->
+
+<!-- Answer: Yes -->
+<!-- ============================= -->
+<head>
+    <link href="main1.css" rel="stylesheet">
+    <script>
+        alert('Hello World');
+    </script>
+</head>
+<!-- Does main1.css have to be downloaded and parsed before Hello World is alerted? -->
+
+<!-- Answer: Yes -->
+<!-- ============================= -->
+<head>
+    <link href="main1.css" rel="stylesheet">
+    <link href="main2.css" rel="stylesheet">
+</head>
+<!-- Does main1.css have to be downloaded and parsed before main2.css can be fetched? -->
+
+<!-- Answer: No -->
+<!-- ============================= -->
+<head>
+    <link href="main1.css" rel="stylesheet">
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <link href="main2.css" rel="stylesheet">
+</body>
+<!-- Does main2.css have to be downloaded and parsed before Paragraph 1 is rendered on the page? -->
+
+<!-- Answer: Yes -->
+<!-- ============================= -->
