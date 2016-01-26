@@ -33,7 +33,7 @@ function bar() {
 }
 alert(typeof bar());
 
-// Answer: function, because the type of bar is "function"
+// Answer: function, because of the "hoisting" the definition of "foo" is already known when the "bar" is called, so the type of the returned value "foo" is function.
 =====================================
 "1" - - "1";
 
