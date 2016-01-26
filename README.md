@@ -1,3 +1,3 @@
 # Front End Quizes
 
-Front End Quizes - Js, Html and CSS.
+JavaScript, HTML5 and CSS questions and their answers/explanations.
