@@ -110,3 +110,95 @@ foo(1); // undefined
 =====================================
 NaN === NaN;    // false as NaN is not equal even to itself
 =====================================
+
+=====================================
+JS Scope
+=====================================
+function() {
+    var a = 10;
+    if(a > 5) {
+        a = 7;
+    }
+    alert(a);
+}
+// When executed, what value will be alerted to the screen?
+
+// Answer: 7, as the if statement is true and the assignment in it is valid for "a"
+=====================================
+function() {
+    if(true) {
+        var a = 5;
+    }
+    alert(a);
+}
+
+// What would be the value alerted by this function?
+
+// Answer: 5, as the in JS the if statement it not defining its own scope, only functions can define their scopes which is different than the global one, i.e.
+//  "Function Scope," as opposed to "Block Scope."
+=====================================
+var a = 5;
+function first() {
+    a = 6;
+}
+
+
+function second() {
+    alert(a);
+}
+
+// Assuming I call these functions in order, what value gets alerted?
+// Answer: 6, here we allocate a global variable a and set its value to 5. By calling first(), we change its value to 6. This value, 6, then gets alerted.
+=====================================
+function first() {
+    window.a = 3;
+}
+
+
+function second() {
+    alert(a);
+}
+
+// Answer: 3, as the global variables in JS are defined as properties of the "window" object
+=====================================
+var a = 5;
+function() {
+    var a = 7;
+    alert(a);
+}
+
+// There are now two variables with the same name, a. Which one does Javascript pick?
+// Answer: 7, because the function has its own scope and the local variable which is defined there will be printed. 
+// Javascript will work outwards from the innermost level. If it can't find anything at the current level, it moves out a bit more.
+=====================================
+var a = 6;
+function test() {
+    var a = 7;
+    function again() {
+        var a = 8;
+        alert(a);  // First
+    }
+    again();
+    alert(a);  // Second
+}
+test();
+​alert(a);​  // Third
+
+// When executed, this will pop up three alerts. In order, what are they?
+// Answer: 8, 7, 6, according to the scopes of the functions where the variables are defined
+=====================================
+function getFunc() {
+    var a = 7;
+    return function(b) {
+        alert(a+b);
+    }
+}
+var f = getFunc();
+f(5);
+// What's alerted to the screen?
+// Answer: 12, as this is closure. 
+// Essentially, getFunc() returns a reference to another, anonymous function. 
+// Later on, we call that function, and it still has access to all of the variables
+// it had access to at the time of creation. All of these variables that the function
+// has access to at its creation create a closure, which sticks around for as long as the function pointer itself does.
+=====================================
