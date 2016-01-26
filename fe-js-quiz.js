@@ -204,3 +204,96 @@ f(5);
 // it had access to at the time of creation. All of these variables that the function
 // has access to at its creation create a closure, which sticks around for as long as the function pointer itself does.
 =====================================
+"1" + 2 + "3" + 4;
+
+// What does the above statement evaluate to?
+
+// Answer: 1234
+=====================================
+"1" + 2 + "3" + 4;
+
+// What does the above statement evaluate to?
+
+// Answer: 1234
+=====================================
+4 + 3 + 2 + "1"
+// What does the above statement evaluate to?
+
+// Answer: 91
+=====================================
+var foo = 1;
+function bar() {
+    foo = 10;
+    return;
+    function foo() {}
+}
+bar();
+alert(foo);
+
+// What is alerted?
+
+// Answer: 1
+=====================================
+var x   = 4,
+    obj = {
+        x: 3,
+        bar: function() {
+            var x = 2;
+            setTimeout(function() {
+                var x = 1;
+                alert(this.x);
+            }, 1000);
+        }
+    };
+obj.bar();
+
+// What value is alerted?
+
+// Answer: 4 
+=====================================
+x = 1;
+function bar() {
+    this.x = 2;
+    return x;
+}
+var foo = new bar();
+alert(foo.x);
+
+// What value is alerted?
+
+// Answer: 2
+=====================================
+function foo(a) {
+    alert(arguments.length);
+}
+foo(1, 2, 3);
+
+// What value is alerted?
+
+// Answer: 3
+=====================================
+var foo = function bar() {}; 
+alert(typeof bar);
+
+// What value is alerted?
+
+// Answer: undefined
+=====================================
+function foo(a) {
+    arguments[0] = 2;
+    alert(a);
+}
+foo(1);
+
+// What value is alerted?
+
+// Answer: 2
+=====================================
+function foo(){}
+delete foo.length;
+alert(typeof foo.length);
+
+// What value is alerted?
+
+// Answer: number
+=====================================
